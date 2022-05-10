@@ -1,0 +1,1 @@
+CREATE TABLE `Seal Status Project`.`sealdb` ( `id` INT NOT NULL AUTO_INCREMENT , `Meter_Number` VARCHAR(30) NOT NULL , `Old_Seal_Number` VARCHAR(30) NOT NULL , `New_Seal_Number` VARCHAR(30) NOT NULL , `Status` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
