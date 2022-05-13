@@ -1,16 +1,16 @@
 <h1>Seal Update Project</h1>
-<form>
+<form method="post" action="/user/home">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Meter Number</label>
-    <input type="email" class="form-control me-2" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="meter" class="form-control me-2" id="meter" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Old Seal Number</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="old"  class="form-control" id="old" aria-describedby="emailHelp">
   </div>
    <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">New Seal Number</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="newmeter" class="form-control" id="newmeter" aria-describedby="emailHelp">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
