@@ -11,7 +11,8 @@ router.post('/home', (req, res) => {
     const user = new User({
         meter: req.body.meter,
         old: req.body.old,
-        newmeter: req.body.newmeter
+        newmeter: req.body.newmeter,
+        textarea: req.body.textarea
     })
     user
        .save(user)
@@ -20,32 +21,14 @@ router.post('/home', (req, res) => {
        })
 });
 
-//search data
-router.post('home', (req, res) => {
-    if(req.query.id){
-        const id = req.query.id;
-
-        User.findById(id)
-            .then(data =>{
-                if(!data){
-                    res.status(404).send({ message : "Not found user with id "+ id})
-                }else{
-                    res.send(data)
-                }
-            })
-            .catch(err =>{
-                res.status(500).send({ message: "Erro retrieving user with id " + id})
-            })
-
-    }else{
-        User.find()
-            .then(user => {
-                res.send(user)
-            })
-            .catch(err => {
-                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
-            })
-    }
+router.get('/main', (req, res) => {
+    User.find({meter: 'meter'}, (error, data) => {
+        if(error){
+            console.log(error);
+        } else{
+            console.log(data);
+        }
+    })
 })
 
 module.exports = router;

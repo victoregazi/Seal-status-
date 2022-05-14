@@ -1,5 +1,5 @@
 <h1>Seal Update Project</h1>
-<form method="post" action="/user/home">
+<form method="POST" action="/user/home">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Meter Number</label>
     <input type="text" name="meter" class="form-control me-2" id="meter" aria-describedby="emailHelp">
@@ -11,6 +11,10 @@
    <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">New Seal Number</label>
     <input type="text" name="newmeter" class="form-control" id="newmeter" aria-describedby="emailHelp">
+  </div>
+ <div class="mb-3">
+  <label for="floatingTextarea2">Comments</label>
+  <textarea name="textarea" class="form-control" placeholder="Leave a comment here" id="textarea" style="height: 100px"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -26,6 +26,7 @@ app.use(express.static('public'));
 //Import Route
 app.use('/user', require('./server/routes/user'));
 
+
 // Template Layouts
 const handlebars = exphbs.create({ extname: '.hbs', });
 app.engine('.hbs', handlebars.engine);
@@ -34,6 +35,6 @@ app.set('view engine', '.hbs');
 
 
 // process variable env-environmnt
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, console.log(`server started on ${PORT}`));
+const port = process.env.PORT || 3000;
+app.listen(port, console.log(`server started on ${port}`));
 
